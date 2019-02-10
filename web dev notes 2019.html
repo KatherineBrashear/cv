@@ -1,0 +1,192 @@
+notes
+
+
+html
+
+*** section header tags
+<h1></h1>
+goes up to six. bigger is 1, smaller is 6.
+go in order, don't skip around
+important for accessibility
+
+*** the boilerplate for every HTML5 file
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+
+*** how to comment
+<!-- here is a comment
+-->
+
+
+*** how to center
+DEPRECATED, AVOID: <center>
+ - instead use CSS to center
+
+
+*** explain <meta charset="utf-8">
+utf-8 is the most up to date character interpreter, has all the languages
+ - unicode
+
+
+*** title
+<title></title>
+what goes between the tags will be displayed on the tab
+
+
+*** head
+<head></head>
+contains the metadata for the document
+
+*** body
+<body></body>
+there is only one body
+has the content for the page, most things go here
+
+
+*** html
+<html></html>
+tells the browser it's html
+the "root" tag (top-level element) that all others descend from
+
+
+*** paragraph
+<p></p>
+makes a paragraph
+
+
+*** horizontal rule
+<hr>
+self-closing, makes a horizontal line
+can use fancier stuff to adjust
+
+*** line break
+<br>
+good for line breaks in poems or addresses
+
+
+*** italics
+<em></em>
+usually you will want to use em
+but <i></i> may sometimes be appropriate
+- it's a matter of semantics
+- case by case basis
+
+
+*** bold
+<strong></strong>
+vs
+<b></b>
+usually you will want to use strong
+but <b></b> may sometimes be appropriate
+- it's a matter of semantics
+- case by case basis
+
+
+*** lists
+bullet points:
+"unordered list"
+<ul>
+  <li>blah</li>
+  <li>whee</li>
+</ul>
+
+numbered list
+"ordered list"
+<ol>
+  <li>one</li>
+  <li>two</li>
+</ol>
+
+
+*** add image to webpage
+<img src="image path goes here...the source" alt="alternative text if image fails to load, good for accessibility">
+you can pull an image path from an image online but you're relying on that website always being up
+so a more reliable way would be to save the image, give it a good memorable name, and add it to the document
+then the name of the image would be what you'd put in the source instead of an image path to another website
+
+
+*** add a link
+to another page in the website
+or
+to a page on a different website
+<a href="#"></a>
+the link goes where the hashtag is
+to link to another page in the website, create another page(file) at the same level as the others...
+...(index, hobbies, and contact me would all be on one level)
+and so put the name of the desired page where the hashtag is to create a link to another page
+
+
+*** create a table
+there's some variability here
+use a caption element immediately following the table element
+so why would you want to use thead and tbody and tfoot?
+you may wish to style each piece differently with CSS. voila.
+
+you can use a table to put an image and text side by side
+
+tr is table row
+td is table data or table cell
+
+
+
+<table>
+  <caption>text describing the table here</caption>
+
+</table>
+
+example pulled from MDN
+<p>Table with thead, tfoot, and tbody</p>
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+*** forms and inputs
+inputs are self-closing
+define the input type with the type attribute
+so this can be buttons, sliders, color pickers, submit forms, etc.
+<form class="" action="index.html" method="post">
+  <input type="text" name="" value="">
+</form>
+* write a message in the form box
+<textarea name="name" rows="8" cols="80"></textarea>
+the rows are how tall
+the columns are how wide
+* email form
+<input type="email" name="yourEmail" value="">
+the input type email gives some basic checking to see if it's an actual email in the field
+* example
+<form class="" action="mailto:crescentwinter@gmail.com" method="post" enctype="text/plain">
+  <label>Your Name:</label>
+  <input type="text" name="yourName" value=""><br>
+  <label>Your Email:</label>
+  <input type="email" name="yourEmail" value=""><br>
+  <label>Your Message:</label><br>
+  <textarea name="yourMessage" rows="10" cols="30"></textarea><br>
+  <input type="submit" name="">
